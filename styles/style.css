@@ -1,0 +1,19 @@
+/* BASE CODE */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  background-color: bisque;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
