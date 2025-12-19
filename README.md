@@ -2,3 +2,5 @@
 
 ## Getting Started
 Open `index.html`
+
+Inspired by [Daylio](https://daylio.net/)
