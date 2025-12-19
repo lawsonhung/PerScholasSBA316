@@ -15,17 +15,21 @@
 
     <br />
 
-    <form action="/submit-form" method="post">
+    <form id="moodForm">
       <fieldset>
         <legend>Hmm...</legend>
 
         <input type="radio" name="sad" value="sad">
+        <label for="sad">SadLabel</label>
 
         <input type="radio" name="okay" value="okay">
+        <label for="okay">OkayLabel</label>
 
         <input type="radio" name="happy" value="happy">
+        <label for="happy">HappyLabel</label>
       </fieldset>
 
+      <button type="submit">Log</button>
     </form>
 
   </main>
