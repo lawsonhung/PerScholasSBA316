@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,40 @@
   <link rel="stylesheet" href="styles/style.css">
   <script defer src="scripts/script.js"></script>
 </head>
+
 <body>
 
   <main>
 
-    <h1>How are you?</h1>
+    <h1>Where should we go?</h1>
 
     <br />
 
-    <form id="moodForm">
-      <fieldset id="moodFormFieldset">
-        <legend>Hmm...</legend>
+    <form id="newActivityForm">
+      <fieldset>
+        <legend id="hmLegend">Hm...</legend>
 
-        <input type="radio" name="sad" value="sad">
-        <label for="sad">SadLabel</label>
+        <input type="text" placeholder="Name">
+        <br />
+        <input type="text" placeholder="Description">
+        <br />
+        <input type="text" placeholder="Location">
 
-        <input type="radio" name="okay" value="okay">
-        <label for="okay">OkayLabel</label>
+        <br />
 
-        <input type="radio" name="happy" value="happy">
-        <label for="happy">HappyLabel</label>
+        <select name="location">
+          <option value="newYork">New York</option>
+          <option value="philadelphia">Philadelphia</option>
+          <option value="chicago">Chicago</option>
+        </select>
+
       </fieldset>
 
-      <button type="submit">Log</button>
+      <button id="newActivityFormSubmitBtn" type="submit">Add Activity</button>
     </form>
 
   </main>
 
 </body>
+
 </html>

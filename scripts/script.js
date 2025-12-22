@@ -1,9 +1,9 @@
-const moodForm = document.getElementById("moodForm");
+const newActivityForm = document.getElementById("newActivityForm");
 
-moodForm.addEventListener("submit", handleMoodFormSubmit)
+newActivityForm.addEventListener("submit", handleNewActivityFormSubmit);
 
-function handleMoodFormSubmit(e) {
+function handleNewActivityFormSubmit(e) {
   e.preventDefault();
-  
-  console.log(e.target)
+
+  console.log(e.target);
 }
