@@ -29,7 +29,7 @@
 
         <br />
 
-        <select name="location">
+        <select name="location" id="locationSelect">
           <option value="newYork">New York</option>
           <option value="philadelphia">Philadelphia</option>
           <option value="chicago">Chicago</option>
@@ -37,7 +37,7 @@
 
         <br />
 
-        <select name="weather" id="">
+        <select name="weather" id="weatherSelect">
           <option value="sunny">Sunny</option>
           <option value="snowy">Snowy</option>
           <option value="rainy">Rainy</option>
@@ -46,12 +46,14 @@
 
         <br />
 
-        <input type="number" placeholder="Cost" min="0">
+        <input type="number" placeholder="Cost" min="0" id="costInput">
 
       </fieldset>
 
       <button id="newActivityFormSubmitBtn" type="submit">Add Activity</button>
     </form>
+
+    <ul id="adventureList"></ul>
 
   </main>
 
