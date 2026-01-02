@@ -17,7 +17,9 @@ function handleNewActivityFormSubmit(e) {
   e.preventDefault();
 
   console.log(e.target);
-  const name = nameInput.value;
+  const name = validateName();
+  if (!name) return false;
+  
   const description = descriptionInput.value;
   const location = locationInput.value;
 
@@ -26,6 +28,15 @@ function handleNewActivityFormSubmit(e) {
   addAdventure();
 
   updateTotalCost();
+}
+
+function validateName() {
+  if (nameInput.value == "") {
+    alert("You forgot to give a name to your adventure!");
+    nameInput.focus();
+    return false;
+  }
+  return nameInput.value;
 }
 
 function addAdventure() {
