@@ -5,9 +5,13 @@ const locationSelect = document.querySelector("#locationSelect");
 const weatherSelect = document.querySelector("#weatherSelect");
 const costInput = document.querySelector("#costInput");
 
-const adventureList = document.querySelector("#adventureList");
+const totalCostEl = document.getElementById("totalCost");
+
+const adventureListEl = document.querySelector("#adventureList");
 
 newActivityForm.addEventListener("submit", handleNewActivityFormSubmit);
+
+let adventureListArray = [];
 
 function handleNewActivityFormSubmit(e) {
   e.preventDefault();
@@ -20,11 +24,15 @@ function handleNewActivityFormSubmit(e) {
   console.log(name, description, location);
 
   addAdventure();
+
+  updateTotalCost();
 }
 
 function addAdventure() {
   const adventureToAdd = document.createDocumentFragment();
   const liToAdd = document.createElement("li");
+
+  liToAdd.classList.add("adventureItem");
 
   const name = nameInput.value;
   const description = descriptionInput.value;
@@ -46,4 +54,27 @@ function addAdventure() {
 
   adventureToAdd.appendChild(liToAdd);
   adventureList.appendChild(adventureToAdd);
+
+  pushAdventureToArray(name, description, location, weather, cost);
+}
+
+function pushAdventureToArray(name, description, location, weather, cost) {
+  const adventure = {
+    name: name,
+    description: description,
+    location: location,
+    weather: weather,
+    cost: Number(cost)
+  }
+
+  adventureListArray.push(adventure);
+}
+
+function updateTotalCost() {
+  let totalCost = 0;
+
+  for (adventure of adventureListArray)
+    totalCost += adventure.cost;
+  
+  totalCostEl.innerText = `This is going to cost us $${totalCost}!`;
 }

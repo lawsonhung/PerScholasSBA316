@@ -13,47 +13,65 @@
 
   <main>
 
-    <h1>Where should we go?</h1>
+    <section>
 
-    <br />
+      <article>
 
-    <form id="newActivityForm">
-      <fieldset>
-        <legend id="hmLegend">Hm...</legend>
-
-        <input type="text" id="nameInput" placeholder="Name">
-        <br />
-        <input type="text" id="descriptionInput" placeholder="Description">
-        <br />
-        <input type="text" id="locationInput" placeholder="Location">
+        <h1>Where should we go?</h1>
 
         <br />
 
-        <select name="location" id="locationSelect">
-          <option value="newYork">New York</option>
-          <option value="philadelphia">Philadelphia</option>
-          <option value="chicago">Chicago</option>
-        </select>
+        <form id="newActivityForm">
+          <fieldset>
+            <legend id="hmLegend">Hm...</legend>
 
-        <br />
+            <input type="text" id="nameInput" placeholder="Name">
+            <br />
+            <input type="text" id="descriptionInput" placeholder="Description">
+            <br />
+            <input type="text" id="locationInput" placeholder="Location">
 
-        <select name="weather" id="weatherSelect">
-          <option value="sunny">Sunny</option>
-          <option value="snowy">Snowy</option>
-          <option value="rainy">Rainy</option>
-          <option value="cold">Cold</option>
-        </select>
+            <br />
 
-        <br />
+            <select name="location" id="locationSelect">
+              <option value="New York">New York</option>
+              <option value="Philadelphia">Philadelphia</option>
+              <option value="Chicago">Chicago</option>
+            </select>
 
-        <input type="number" placeholder="Cost" min="0" id="costInput">
+            <br />
 
-      </fieldset>
+            <select name="weather" id="weatherSelect">
+              <option value="sunny">Sunny</option>
+              <option value="snowy">Snowy</option>
+              <option value="rainy">Rainy</option>
+              <option value="cold">Cold</option>
+            </select>
 
-      <button id="newActivityFormSubmitBtn" type="submit">Add Activity</button>
-    </form>
+            <br />
 
-    <ul id="adventureList"></ul>
+            <input type="number" placeholder="Cost" min="0" id="costInput">
+
+          </fieldset>
+
+          <button id="newActivityFormSubmitBtn" type="submit">Add Activity</button>
+        </form>
+
+      </article>
+
+      <article>
+
+        <h1 id="totalCost"></h1>
+
+      </article>
+
+    </section>
+
+    <aside>
+
+      <ul id="adventureList"></ul>
+
+    </aside>
 
   </main>
 
