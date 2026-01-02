@@ -45,17 +45,24 @@ function addAdventure() {
   const descriptionEl = document.createElement("p");
 
   nameEl.textContent = name;
-  summaryEl.textContent = `Going to ${location} on a ${weather} day will cost us $${cost}`;
+  summaryEl.textContent = `This trip to ${location} on a ${weather} day will cost us $${cost}`;
   descriptionEl.textContent = description;
 
   liToAdd.appendChild(nameEl);
   liToAdd.appendChild(summaryEl);
   liToAdd.appendChild(descriptionEl);
 
+  liToAdd.addEventListener("mousedown", () => highlightAdventureList(liToAdd))
+
   adventureToAdd.appendChild(liToAdd);
   adventureList.appendChild(adventureToAdd);
 
   pushAdventureToArray(name, description, location, weather, cost);
+}
+
+function highlightAdventureList(li) {
+  li.parentNode.style.backgroundColor = "#D8E2DC";
+  li.parentNode.addEventListener("mouseup", () => adventureListEl.style.backgroundColor = "#FFE5D9");
 }
 
 function pushAdventureToArray(name, description, location, weather, cost) {

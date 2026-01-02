@@ -36,3 +36,7 @@ section {
 #newActivityFormSubmitBtn {
   width: 100%;
 }
+
+.adventureItem:hover {
+  background-color: #D8E2DC;
+}
