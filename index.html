@@ -15,7 +15,7 @@
 
     <section>
 
-      <article>
+      <article id="whereToGoArticle">
 
         <h1>Where should we go?</h1>
 
@@ -23,17 +23,17 @@
 
         <form id="newActivityForm">
           <fieldset>
-            <legend id="hmLegend">Hm...</legend>
+            <legend>Hm...</legend>
 
-            <input type="text" id="nameInput" placeholder="Name">
+            <input type="text" id="nameInput" class="activityFormEl" placeholder="Name">
             <br />
-            <input type="text" id="descriptionInput" placeholder="Description">
+            <textarea id="descriptionInput" class="activityFormEl" placeholder="Description" rows="4"></textarea>
             <br />
-            <input type="text" id="locationInput" placeholder="Location">
+            <input type="text" id="locationInput" class="activityFormEl" placeholder="Location">
 
             <br />
 
-            <select name="location" id="locationSelect">
+            <select name="location" id="locationSelect" class="activityFormEl">
               <option value="New York">New York</option>
               <option value="Philadelphia">Philadelphia</option>
               <option value="Chicago">Chicago</option>
@@ -41,7 +41,7 @@
 
             <br />
 
-            <select name="weather" id="weatherSelect">
+            <select name="weather" id="weatherSelect" class="activityFormEl">
               <option value="sunny">Sunny</option>
               <option value="snowy">Snowy</option>
               <option value="rainy">Rainy</option>
@@ -50,7 +50,7 @@
 
             <br />
 
-            <input type="number" placeholder="Cost" min="0" id="costInput" required>
+            <input type="number" placeholder="Cost" min="0" id="costInput"  class="activityFormEl" required>
 
           </fieldset>
 
