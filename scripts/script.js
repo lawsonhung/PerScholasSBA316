@@ -69,6 +69,7 @@ function addAdventure() {
   adventureList.appendChild(adventureToAdd);
 
   pushAdventureToArray(name, description, location, weather, cost);
+  styleAdventureListBorders()
 }
 
 function highlightAdventureList(li) {
@@ -86,6 +87,11 @@ function pushAdventureToArray(name, description, location, weather, cost) {
   }
 
   adventureListArray.push(adventure);
+}
+
+function styleAdventureListBorders() {
+  adventureListEl.firstChild.style.borderTop = "none";
+  adventureListEl.lastChild.style.borderBottom = "none";
 }
 
 function updateTotalCost() {
