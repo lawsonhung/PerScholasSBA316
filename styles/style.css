@@ -27,12 +27,20 @@ main {
 }
 
 section {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 #whereToGoArticle {
   text-align: center;
+  width: 100%;
+  justify-items: center;
+}
+
+#newActivityForm {
+  width: 90%;
 }
 
 .activityFormEl {
@@ -68,4 +76,8 @@ aside {
   height: 100%;
   width: 100%;
   overflow-y: auto;
+}
+
+#adventureList {
+  padding: 0;
 }
