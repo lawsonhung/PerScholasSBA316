@@ -48,7 +48,6 @@ section {
 }
 
 #newActivityFormSubmitBtn {
-  width: 100%;
   height: 4em;
   background-color: #D8E2DC;
 }
@@ -66,10 +65,15 @@ section {
   list-style-type: none;
   border: 1px solid lightgray;
   border-width: 1px 0;
+  padding-bottom: 1em;
 }
 
 .adventureItem:hover {
   background-color: #D8E2DC;
+}
+
+.adventureItem p {
+  margin-block-end: 0;
 }
 
 aside {

@@ -7,10 +7,12 @@ const costInput = document.querySelector("#costInput");
 
 const totalCostEl = document.getElementById("totalCost");
 
+const adventureListAside = document.querySelector("#adventureListAside");
 const adventureListEl = document.querySelector("#adventureList");
 
 newActivityForm.addEventListener("submit", handleNewActivityFormSubmit);
-totalCostEl.addEventListener("click", handleTotalCostElClick)
+totalCostEl.addEventListener("click", handleTotalCostElClick);
+adventureListAside.addEventListener("mouseup", () => adventureListAside.style.backgroundColor = "#FFE5D9");
 
 let adventureListArray = [];
 let totalCost;
@@ -65,7 +67,7 @@ function addAdventure() {
   liToAdd.appendChild(summaryEl);
   liToAdd.appendChild(descriptionEl);
 
-  liToAdd.addEventListener("mousedown", () => highlightAdventureList(liToAdd))
+  liToAdd.addEventListener("mousedown", highlightAdventureList)
 
   adventureToAdd.appendChild(liToAdd);
   adventureList.appendChild(adventureToAdd);
@@ -74,9 +76,8 @@ function addAdventure() {
   styleAdventureListBorders()
 }
 
-function highlightAdventureList(li) {
-  li.parentNode.style.backgroundColor = "#D8E2DC";
-  li.parentNode.addEventListener("mouseup", () => adventureListEl.style.backgroundColor = "#FFE5D9");
+function highlightAdventureList() {
+  adventureListAside.style.backgroundColor = "#D8E2DC";
 }
 
 function pushAdventureToArray(name, description, location, weather, cost) {
