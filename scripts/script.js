@@ -10,8 +10,10 @@ const totalCostEl = document.getElementById("totalCost");
 const adventureListEl = document.querySelector("#adventureList");
 
 newActivityForm.addEventListener("submit", handleNewActivityFormSubmit);
+totalCostEl.addEventListener("click", handleTotalCostElClick)
 
 let adventureListArray = [];
+let totalCost;
 
 function handleNewActivityFormSubmit(e) {
   e.preventDefault();
@@ -95,10 +97,26 @@ function styleAdventureListBorders() {
 }
 
 function updateTotalCost() {
-  let totalCost = 0;
+  let tempTotalCost = 0;
 
   for (adventure of adventureListArray)
-    totalCost += adventure.cost;
+    tempTotalCost += adventure.cost;
   
-  totalCostEl.innerText = `This is going to cost us $${totalCost}!`;
+  totalCostEl.innerText = `This is going to cost us $${tempTotalCost}!`;
+  totalCost = tempTotalCost;
+}
+
+function handleTotalCostElClick() {
+  let alertMsg = "";
+
+  for (adventureIndex in adventureListArray) {
+    const adventure = adventureListArray[adventureIndex];
+    alertMsg += `$${adventure.cost}`;
+    if (adventureIndex < adventureListArray.length - 1) 
+      alertMsg += " + ";
+  }
+
+  alertMsg += ` = ${totalCost}`;
+
+  window.alert(alertMsg);
 }
