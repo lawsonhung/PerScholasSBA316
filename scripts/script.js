@@ -23,11 +23,6 @@ function handleNewActivityFormSubmit(e) {
   console.log(e.target);
   const name = validateName();
   if (!name) return false;
-  
-  const description = descriptionInput.value;
-  const location = locationInput.value;
-
-  console.log(name, description, location);
 
   addAdventure();
 
